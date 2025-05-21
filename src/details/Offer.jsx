@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import hero from '../Assets/hero_image.png'
 
 const Offer = () => {
   return (
@@ -10,7 +11,7 @@ const Offer = () => {
     <Link className='w-35 p-1.5 flex  ring-1 ring-pink-900 justify-center items-center rounded-3xl text-white bg-pink-900 hover:bg-transparent hover:text-pink-900 cursor-pointer  active:bg-pink-900 active:text-white' to="/collection">Check Now</Link>
     </div>
     <div className="flex w-[90%] md:w-[40%] justify-center items-center">
-    <img className='w-[70%] ' src="/src/Assets/hero_image.png" alt="" />
+    <img className='w-[70%] ' src={hero} alt="" />
     </div>
   </div>
   )

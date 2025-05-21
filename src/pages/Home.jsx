@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import NewCollections from '../details/NewCollections'
 import SummerCollections from '../details/SummerCollections'
 import Offer from '../details/Offer'
+import hero from '../Assets/hero_image.png'
 
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
         </Link>
       </div>
       <div className="flex items-center justify-center w-full h-[40%] md:w-[50%]">
-        <img className='w-[55%] ' src="/src/Assets/hero_image.png" alt="" />
+        <img className='w-[55%] ' src={hero} alt="" />
       </div>
       </div>
       <NewCollections />

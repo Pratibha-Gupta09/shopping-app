@@ -9,16 +9,22 @@ const Cart = ({items, removeFromCart, clearCart, itemQuantity}) => {
   const discount = (total * 20) / 100;
 
   return (
+
+    
     <div className='flex flex-col w-full bg-white '>
       <h1 className='font-bold text-2xl md:pl-8'>My Cart</h1>
-    <div className='w-full flex md:flex-row flex-col space-y-3 justify-around mt-3'>
+
+      {items.length === 0 ? (   <div className="text-center py-10 text-gray-600 text-lg font-semibold">
+        Your cart is empty 🛒
+      </div>) : (
+             <div className='w-full flex md:flex-row flex-col space-y-3 justify-around mt-3'>
 
       <div className="md:w-[60%] w-full flex flex-col items-center space-y-2 ">
         {
           items.map((item, index) => {
             return(
                <div key={index} className="flex flex-row items-center justify-around shadow shadow-gray-500 w-full h-28 md:h-33">
-          <div className=" flex md:w-[15%] w-[30%] justify-center items-center  h-full"><img className='md:w-[75%]' src={item.image} alt=""/></div>
+          <div className=" flex md:w-[15%] w-[30%] justify-center items-center h-full overflow-hidden"><img className=' w-[75%]' src={item.image} alt=""/></div>
           <div className="flex flex-col w-[70%] space-y-1 justify-center h-full md:p-2 p-2">
             <div className="flex items-center justify-between w-full">
                   <h2 className='font-bold text-lg'>{item.name}</h2>
@@ -74,6 +80,8 @@ const Cart = ({items, removeFromCart, clearCart, itemQuantity}) => {
     </div>
    
       </div>
+      )}
+   
       </div>
   )
 }
